@@ -1,0 +1,11 @@
+TITLE     methane in water
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   29.960   29.960   29.960  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  C1  MOL     1      15.660  21.640  18.560  1.00  0.00            
+ATOM      2  H1  MOL     1      14.750  21.090  18.320  1.00  0.00            
+ATOM      3  H2  MOL     1      16.120  21.250  19.470  1.00  0.00            
+ATOM      4  H3  MOL     1      16.440  21.420  17.820  1.00  0.00            
+ATOM      5  H4  MOL     1      15.660  22.730  18.470  1.00  0.00            
+TER
+ENDMDL
