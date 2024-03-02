@@ -1,6 +1,6 @@
 ## Spring 2024: Chem 864 Projects
 
-Let me know if you can have access to my homework or not. ╰(●’◡’●)╮
+This repository contains all the necessary files for the chem 864 course's projects at UW-Madison. Let me know if you can have access to my homework or not. ╰(●’◡’●)╮
 
 ## Quick Introduction: 
 - **Name:** Jiahui Yang
