@@ -10,3 +10,5 @@ Let me know if you can have access to my homework or not. ╰(●’◡’●)�
 
 ## Project 1
 - project1_nvt.ipynb
+- project1_npt.ipynb
+- project1_nve.ipynb
