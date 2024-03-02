@@ -9,7 +9,7 @@ This repository contains all the necessary files for the chem 864 course's proje
 - **Status:** PhD Student
 
 ## Project 1
-###Teammate: Longbang Liu, Chemistry
+### Teammate: Longbang Liu, Chemistry
 - project1_nvt.ipynb
 - project1_npt.ipynb
 - project1_nve.ipynb
