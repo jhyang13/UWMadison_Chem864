@@ -14,3 +14,8 @@ This repository contains all the necessary files for the chem 864 course's proje
 - project1_nvt.ipynb
 - project1_npt.ipynb
 - project1_nve.ipynb
+
+## Project 2
+**Teammate:** Hyeree Hyun, Chemistry
+
+- project1_nvt.ipynb
