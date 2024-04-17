@@ -19,3 +19,8 @@ This repository contains all the necessary files for the chem 864 course's proje
 **Teammate:** Hyeree Hyun, Chemistry
 
 - project2.ipynb
+
+## Project 3
+**Teammate:** Yiwen Wang, Chemistry
+
+- project3.ipynb
