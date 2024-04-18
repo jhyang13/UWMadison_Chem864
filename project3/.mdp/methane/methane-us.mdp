@@ -1,0 +1,97 @@
+;Archivo para realizar el relajamiento del agua alrrededor de la proteina durante Xps y al mismo tiempo se acopla la presion
+;dsilva 24-mar-07
+
+title                = NPT production run with random atomic velocity regeneration
+
+; Run parameters
+integrator           = md               ;integrador
+dt                   = 0.002            ;tamano del paso
+nsteps               = 1000000          ;numero de pasos
+
+; Periodic boundary conditions
+pbc                  = xyz              ;Condiciones periodicas en xyz
+
+; Output control
+nstcalcenergy        = 10
+nstlist              = 10               ;Frecuencia de actualizacion de vecinos
+rlist                = 1.0              ;Distancia de corte para la lista de vecinos cercanos
+ns_type              = grid             ;Tipo de mapeo de vecinos
+
+; Electrostatics
+coulombtype          = PME              ;Tipo de tratamiento de coulomb
+pme_order            = 4                ; cubic interpolation
+rcoulomb             = 1.0              ;Distancia de corte para las interacciones de Coulomb
+fourierspacing       = 0.16             ; grid spacing for FFT
+optimize_fft         = yes              ;Calcular el plan optimo para la malla inicial, puede salvar tiempo en simulaciones largas
+ewald_rtol           = 1e-5             ;Fuerza del potencial desplazado de Ewald
+DispCorr             = EnerPres
+
+; Nonbonded settings 
+vdwtype              = cut-off           ;VDW type
+rvdw                 = 1.0              ;Cutoff for LJ or Bukingham
+
+; Temperature coupling is on with V-rescale
+tcoupl               = V-rescale                      ;Thermostat on (T)
+tc-grps              = System
+tau_t                = 1.0                    ;Temperature coupling dT in ps
+ref_t                = 298     	              ;Reference temperature, one for each group, in K
+
+; Pressure coupling is on
+pcoupl          = Parrinello-Rahman     ; Pressure coupling on in NPT
+pcoupltype      = isotropic             ; uniform scaling of x-y box vectors, independent z
+tau_p           = 2.00                  ; time constant, in ps
+ref_p           = 1.0                   ; reference pressure, x-y, z (in bar)
+compressibility = 4.5e-5                ; isothermal compressibility, bar^-1
+
+; Velocity generation
+continuation         = no
+gen_vel              = yes              ; Generacion de velocidades con una distribucion de Maxwell a la temp (gen_temp) y con la semilla (gen_seed)
+gen_temp             = 298              ; temperature for Maxwell distribution at 298K
+gen_seed             = -1               ; generate a random seed
+
+; Bond parameters
+constraints          = all-bonds        ;Restricciones de los enlaces
+constraint_algorithm = lincs            ;Algoritmo de restriccion
+lincs_iter           = 1                ; accuracy of LINCS
+lincs_order          = 4                ;Maximo orden de expancion para la matriz de acoplamiento restringida
+
+nstcomm              = 10
+comm-mode            = Linear
+comm-grps            = System
+
+; Output control
+nstxout              = 0         ;Frecuencia (en pasos) con que se escriben las coordenadas al archivo de trayectoria
+nstvout              = 0
+nstfout              = 0
+xtc_grps             = System
+nstxtcout            = 1000
+
+nstlog               = 1000          ;Frecuencia (en pasos) con que se escriben las archivo log
+nstenergy            = 1000          ;Frecuencia (en pasos) con que se escriben las energias al archivo de energia
+energygrps           = System 
+
+; Umbrella sampling
+pull                    = yes	    ; Tell grompp to read settings for COM pulling
+pull-print-ref-value    = yes	    ; Print Reference Value for Each Pull Coordinate
+pull-print-components   = yes	    ; Print Distance and Cartesian Components Selected in pull-coord1-dim
+pull-nstxout		= 1000      ; frequency for writing out the COMs of all the pulled group, 1 ps
+pull-nstfout		= 1000      ; frequency for writing out the force of all the pulled group, 1 ps
+pull_ncoords            = 1         ; Only One Reaction Coordinate
+pull_ngroups            = 2         ; Two Groups Defining one Reaction Coordinate 
+
+;pull-group1-pbcatom     = -1
+;pull-pbc-ref-prev-step-com      = yes
+
+pull_group1_name        =  MET1    
+pull_group2_name        =  MET2              
+
+pull_coord1_type        = umbrella        ; Harmonic Potential
+pull_coord1_geometry    = distance        ; Simple Distance Increase
+pull-coord1-groups      = 1 2		  ; Group Indices on Which This Pull Coordinate 
+pull-coord1-dim         = N N Y		  ; Dimensions that This Pull Coordinate 
+pull-coord1-start       = yes		  ; Add COM Distance of Starting Conformation to pull-coord1-init
+pull_coord1_rate        = 0.01	          ; 0.01 nm per ps
+pull_coord1_k           = 1000		  ; The force constant, kJ mol^-1 nm^-2
+
+
+

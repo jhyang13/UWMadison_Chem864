@@ -1,0 +1,18 @@
+;	User dsilva (1701)
+; Archivo para la minimizacion de LAO
+
+constraints         =  none
+integrator          =  steep
+nsteps              =  10000
+;	Energy minimizing stuff
+nstlist             =  10
+rlist               =  1.2
+coulombtype         =  pme
+rcoulomb            =  1.2
+vdw-type            =  switch
+rvdw                =  1.2
+rvdw_switch         =  1.0
+nstenergy           =  10
+emtol               =  0
+lincs_iter          =  4
+nstxout             =  1000		;Frecuencia (en pasos) con que se escriben las coordenadas al archivo de trayectoria

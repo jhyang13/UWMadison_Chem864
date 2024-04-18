@@ -1,0 +1,19 @@
+; Include forcefield parameters
+#include "amber03.ff/forcefield.itp"
+
+#include "methane.itp"
+
+; Include water topology
+#include "amber03.ff/tip3p.itp"
+
+; Include topology for ions
+#include "amber03.ff/ions.itp"
+
+[ system ]
+; Name
+methane in water
+
+[ molecules ]
+; Compound        #mols
+MOL               2
+SOL              2160

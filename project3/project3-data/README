@@ -1,0 +1,6 @@
+
+If you want to use my umbrella sampling trajectories, please refer to the two readme files below:
+    ala2_us_data/readme.txt  methane_us_data/readme.txt
+
+If you want to run umbrella sampling simulations on your computer, please refer to the GROMACS manual and the two folders listed below of the configurations.
+    ala2_md_setup methane_md_setup
