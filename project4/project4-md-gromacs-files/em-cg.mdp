@@ -1,0 +1,67 @@
+; Preprocessing
+title                    = system
+cpp                      = cpp
+;include                 = -I../top
+; define                   = -DFLEXIBLE
+                                        ; best choice for energy minimization
+
+; Run control
+integrator               = cg
+nsteps                   = 10000
+nstcomm                  = 20
+nstcalcenergy            = 20
+
+; Energy minimization
+emtol                    = 0  ;or 1000
+emstep                   = 0.02
+
+; Output control
+nstxout                  = 0
+nstvout                  = 0
+nstfout                  = 0
+nstlog                   = 0
+nstenergy                = 0
+nstxtcout                = 200
+xtc-precision            = 1000
+xtc_grps                 = 
+energygrps               = 
+
+; Neighbor searching
+nstlist                  = 20
+ns_type                  = grid
+pbc                      = xyz
+rlist                    = 1.0
+fourierspacing = 0.15
+pme_order = 6
+ewald_rtol = 1.E-5
+optimize_fft = yes
+
+; Electrostatics
+coulombtype              = PME
+rcoulomb                 = 1.0
+epsilon_r                = 1.0
+
+; VdW
+vdw-type                 = Cutoff
+rvdw-switch              = 0
+rvdw                     = 1.0 
+
+; Temperature coupling
+tcoupl                   = nose-hoover
+tc-grps                  = System
+tau_t                    = 0.2
+ref_t                    = 300
+
+; Pressure coupling
+Pcoupl                   = Parrinello-Rahman
+pcoupltype               = semiisotropic
+tau_p                    = 1.0
+compressibility          = 4.5e-5 4.5e-5
+ref_p                    = 1.0  1.0
+
+; Velocity generation
+gen_vel                  = no
+
+; Bonds
+constraints              = none
+

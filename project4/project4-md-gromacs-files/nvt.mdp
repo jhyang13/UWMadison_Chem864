@@ -1,0 +1,66 @@
+;Archivo para realizar el relajamiento del agua alrrededor de la proteina durante Xps y al mismo tiempo se acopla la presion
+;dsilva 24-mar-07
+;
+
+title                = NPT production run with random atomic velocity regeneration
+
+integrator           = md               ;integrador
+dt                   = 0.002            ;tamano del paso
+nsteps               = 5000             ;numero de pasos
+
+pbc                  = xyz              ;Condiciones periodicas en xyz
+
+nstcalcenergy        = 10
+nstlist              = 10               ;Frecuencia de actualizacion de vecinos
+rlist                = 1.0              ;Distancia de corte para la lista de vecinos cercanos
+ns_type              = grid             ;Tipo de mapeo de vecinos
+
+coulombtype          = PME              ;Tipo de tratamiento de coulomb
+pme_order            = 4                ; cubic interpolation
+rcoulomb             = 1.0              ;Distancia de corte para las interacciones de Coulomb
+fourierspacing       = 0.16             ; grid spacing for FFT
+optimize_fft         = yes              ;Calcular el plan optimo para la malla inicial, puede salvar tiempo en simulaciones largas
+ewald_rtol           = 1e-5             ;Fuerza del potencial desplazado de Ewald
+DispCorr             = EnerPres
+
+vdwtype              = cut-off          ;VDW type
+rvdw                 = 1.0              ;Cutoff for LJ or Bukingham
+
+
+; Temperature coupling is on with V-rescale
+tcoupl               = V-rescale        ;Thermostat on (T)
+tc-grps              = System
+tau_t                = 1.0              ;Temperature coupling dT in ps
+ref_t                = TEMPERATURE      ;Reference temperature, one for each group, in K
+
+; Pressure coupling is on
+pcoupl          = no                    ; Pressure coupling on in NPT
+pcoupltype      = isotropic             ; uniform scaling of x-y box vectors, independent z
+tau_p           = 1.00                  ; time constant, in ps
+ref_p           = 1.0                   ; reference pressure, x-y, z (in bar)
+compressibility = 4.5e-5                ; isothermal compressibility, bar^-1
+
+continuation         = no
+gen_vel              = no               ; Generacion de velocidades con una distribucion de Maxwell a la temp (gen_temp) y con la semilla (gen_seed)
+gen_temp             = TEMPERATURE      ; temperature for Maxwell distribution at 298K
+gen_seed             = -1               ; generate a random seed
+
+constraints          = all-bonds        ;Restricciones de los enlaces
+constraint_algorithm = lincs            ;Algoritmo de restriccion
+lincs_iter           = 1                ; accuracy of LINCS
+lincs_order          = 4                ;Maximo orden de expancion para la matriz de acoplamiento restringida
+
+nstcomm              = 10
+comm-mode            = Linear
+comm-grps            = System
+
+nstxout              = 0                ;Frecuencia (en pasos) con que se escriben las coordenadas al archivo de trayectoria
+nstvout              = 0   
+nstfout              = 0   
+xtc_grps             = System
+nstxtcout            = 50  
+
+nstlog               = 0                ;Frecuencia (en pasos) con que se escriben las archivo log
+nstenergy            = 50               ;Frecuencia (en pasos) con que se escriben las energias al archivo de energia
+energygrps           = System 
+

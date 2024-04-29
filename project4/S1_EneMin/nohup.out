@@ -1,0 +1,77 @@
+                      :-) GROMACS - gmx mdrun, 2022.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /home/jyang753/S1_EneMin
+Command line:
+  gmx mdrun -v -nt 1 -deffnm enemin
+
+Reading file enemin.tpr, VERSION 2022.4 (single precision)
+
+NOTE: Parallelization is limited by the small number of atoms,
+      only starting 1 thread-MPI ranks.
+      You can use the -nt and/or -ntmpi option to optimize the number of threads.
+
+1 GPU selected for this run.
+Mapping of GPU IDs to the 1 GPU task in the 1 rank on this node:
+  PP:0
+PP tasks will do (non-perturbed) short-ranged interactions on the GPU
+PP task will update and constrain coordinates on the CPU
+Using 1 MPI thread
+Using 1 OpenMP thread 
+
+
+NOTE: Thread affinity was not set.
+
+Steepest Descents:
+   Tolerance (Fmax)   =  0.00000e+00
+   Number of steps    =        10000
+Step=    0, Dmax= 1.0e-02 nm, Epot= -8.80398e+01 Fmax= 3.75195e+02, atom= 15
+Step=    1, Dmax= 1.0e-02 nm, Epot=  7.00670e+01 Fmax= 9.23790e+03, atom= 15Step=    2, Dmax= 5.0e-03 nm, Epot= -5.26157e+01 Fmax= 4.38230e+03, atom= 15Step=    3, Dmax= 2.5e-03 nm, Epot= -8.11451e+01 Fmax= 1.99328e+03, atom= 15Step=    4, Dmax= 1.2e-03 nm, Epot= -8.72849e+01 Fmax= 8.10029e+02, atom= 15Step=    5, Dmax= 6.2e-04 nm, Epot= -8.83339e+01 Fmax= 2.26451e+02, atom= 15
+Step=    6, Dmax= 7.5e-04 nm, Epot= -8.80002e+01 Fmax= 6.19332e+02, atom= 15Step=    7, Dmax= 3.8e-04 nm, Epot= -8.83983e+01 Fmax= 1.97917e+02, atom= 15
+Step=    8, Dmax= 4.5e-04 nm, Epot= -8.83462e+01 Fmax= 3.25525e+02, atom= 15Step=    9, Dmax= 2.2e-04 nm, Epot= -8.84450e+01 Fmax= 6.94445e+01, atom= 15
+Step=   10, Dmax= 2.7e-04 nm, Epot= -8.83803e+01 Fmax= 2.68879e+02, atom= 15Step=   11, Dmax= 1.3e-04 nm, Epot= -8.84498e+01 Fmax= 1.00051e+02, atom= 15
+Step=   12, Dmax= 1.6e-04 nm, Epot= -8.84515e+01 Fmax= 1.17216e+02, atom= 15
+Step=   13, Dmax= 1.9e-04 nm, Epot= -8.84463e+01 Fmax= 1.47789e+02, atom= 5Step=   14, Dmax= 9.7e-05 nm, Epot= -8.84715e+01 Fmax= 2.24452e+01, atom= 5
+Step=   15, Dmax= 1.2e-04 nm, Epot= -8.84715e+01 Fmax= 9.23011e+01, atom= 5
+Step=   16, Dmax= 1.4e-04 nm, Epot= -8.84715e+01 Fmax= 1.04631e+02, atom= 5Step=   17, Dmax= 7.0e-05 nm, Epot= -8.84834e+01 Fmax= 1.28746e+01, atom= 22
+Step=   18, Dmax= 8.4e-05 nm, Epot= -8.84872e+01 Fmax= 2.81905e+01, atom= 15
+Step=   19, Dmax= 1.0e-04 nm, Epot= -8.84757e+01 Fmax= 1.02538e+02, atom= 15Step=   20, Dmax= 5.0e-05 nm, Epot= -8.84872e+01 Fmax= 3.88460e+01, atom= 5Step=   21, Dmax= 2.5e-05 nm, Epot= -8.84887e+01 Fmax= 8.19767e+00, atom= 5
+Step=   22, Dmax= 3.0e-05 nm, Epot= -8.84894e+01 Fmax= 2.29739e+01, atom= 15
+Step=   23, Dmax= 3.6e-05 nm, Epot= -8.84894e+01 Fmax= 2.85150e+01, atom= 5
+Step=   24, Dmax= 4.4e-05 nm, Epot= -8.84897e+01 Fmax= 2.89107e+01, atom= 15
+Step=   25, Dmax= 5.2e-05 nm, Epot= -8.84888e+01 Fmax= 4.41631e+01, atom= 5Step=   26, Dmax= 2.6e-05 nm, Epot= -8.84909e+01 Fmax= 8.31096e+00, atom= 5
+Step=   27, Dmax= 3.1e-05 nm, Epot= -8.84907e+01 Fmax= 2.80227e+01, atom= 15Step=   28, Dmax= 1.6e-05 nm, Epot= -8.84912e+01 Fmax= 1.15447e+01, atom= 15
+Step=   29, Dmax= 1.9e-05 nm, Epot= -8.84914e+01 Fmax= 1.42637e+01, atom= 5
+Step=   30, Dmax= 2.3e-05 nm, Epot= -8.84916e+01 Fmax= 1.58484e+01, atom= 15
+Step=   31, Dmax= 2.7e-05 nm, Epot= -8.84917e+01 Fmax= 2.13607e+01, atom= 5
+Step=   32, Dmax= 3.2e-05 nm, Epot= -8.84918e+01 Fmax= 2.22357e+01, atom= 15
+Step=   33, Dmax= 3.9e-05 nm, Epot= -8.84912e+01 Fmax= 3.15416e+01, atom= 5Step=   34, Dmax= 1.9e-05 nm, Epot= -8.84924e+01 Fmax= 5.40334e+00, atom= 5
+Step=   35, Dmax= 2.3e-05 nm, Epot= -8.84924e+01 Fmax= 2.17283e+01, atom= 15Step=   36, Dmax= 1.2e-05 nm, Epot= -8.84926e+01 Fmax= 9.39163e+00, atom= 15
+Step=   37, Dmax= 1.4e-05 nm, Epot= -8.84928e+01 Fmax= 9.72852e+00, atom= 5
+Step=   38, Dmax= 1.7e-05 nm, Epot= -8.84928e+01 Fmax= 1.26977e+01, atom= 15Step=   39, Dmax= 8.4e-06 nm, Epot= -8.84930e+01 Fmax= 3.99157e+00, atom= 22
+Step=   40, Dmax= 1.0e-05 nm, Epot= -8.84931e+01 Fmax= 4.78997e+00, atom= 5
+Step=   41, Dmax= 1.2e-05 nm, Epot= -8.84933e+01 Fmax= 1.06829e+01, atom= 15
+Step=   42, Dmax= 1.5e-05 nm, Epot= -8.84935e+01 Fmax= 9.10277e+00, atom= 5
+Step=   43, Dmax= 1.7e-05 nm, Epot= -8.84934e+01 Fmax= 1.44244e+01, atom= 15Step=   44, Dmax= 8.7e-06 nm, Epot= -8.84937e+01 Fmax= 3.77038e+00, atom= 15
+Step=   45, Dmax= 1.0e-05 nm, Epot= -8.84937e+01 Fmax= 7.80685e+00, atom= 5Step=   46, Dmax= 5.2e-06 nm, Epot= -8.84936e+01 Fmax= 3.29434e+00, atom= 16Step=   47, Dmax= 2.6e-06 nm, Epot= -8.84937e+01 Fmax= 3.32007e+00, atom= 22Step=   48, Dmax= 1.3e-06 nm, Epot= -8.84935e+01 Fmax= 3.34485e+00, atom= 22
+Energy minimization has stopped, but the forces have not converged to the
+requested precision Fmax < 0 (which may not be possible for your system). It
+stopped because the algorithm tried to make a new step whose size was too
+small, or there was no change in the energy since last step. Either way, we
+regard the minimization as converged to within the available machine
+precision, given your starting configuration and EM parameters.
+
+Double precision normally gives you higher accuracy, but this is often not
+needed for preparing to run molecular dynamics.
+
+writing lowest energy coordinates.
+
+Steepest Descents converged to machine precision in 49 steps,
+but did not reach the requested Fmax < 0.
+Potential Energy  = -8.8493729e+01
+Maximum force     =  3.7703784e+00 on atom 15
+Norm of force     =  2.0227026e+00
+
+GROMACS reminds you: ""Everything organic and natural is good" - ignoring the fact that organic natural substances include arsenic and poo and crocodiles. And everything chemical is bad, ignoring the fact that... everything is chemicals." (Tim Minchin)
+
