@@ -1,0 +1,61 @@
+                      :-) GROMACS - gmx grompp, 2022.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /home/jyang753/project4/S2_REMD
+Command line:
+  gmx grompp -c /home/jyang753/project4/S2_REMD/step_4/8.gro -p /home/jyang753/project4/S2_REMD/ala2.top -f /home/jyang753/project4/S2_REMD/mdp/nvt_8.mdp -o /home/jyang753/project4/S2_REMD/step_4/8.tpr -maxwarn 10
+
+Ignoring obsolete mdp entry 'title'
+Ignoring obsolete mdp entry 'optimize_fft'
+Ignoring obsolete mdp entry 'ns_type'
+Replacing old mdp entry 'nstxtcout' by 'nstxout-compressed'
+Replacing old mdp entry 'xtc_grps' by 'compressed-x-grps'
+Generating 1-4 interactions: fudge = 0.5
+
+NOTE 1 [file unknown]:
+  You are using constraints on all bonds, whereas the forcefield has been
+  parametrized only with constraints involving hydrogen atoms. We suggest
+  using constraints = h-bonds instead, this will also improve performance.
+
+Number of degrees of freedom in T-Coupling group System is 42.00
+
+NOTE 2 [file /home/jyang753/project4/S2_REMD/mdp/nvt_8.mdp]:
+  The optimal PME mesh load for parallel simulations is below 0.5
+  and for highly parallel simulations between 0.25 and 0.33,
+  for higher performance, increase the cut-off and the PME grid spacing.
+
+
+
+There were 2 notes
+
+GROMACS reminds you: "I Ripped the Cord Right Out Of the Phone" (Capt. Beefheart)
+
+Setting the LD random seed to -150995228
+
+Generated 2145 of the 2145 non-bonded parameter combinations
+
+Generated 2145 of the 2145 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein'
+
+turning all bonds into constraints...
+Analysing residue names:
+There are:     3    Protein residues
+Analysing Protein...
+
+The largest distance between excluded atoms is 0.388 nm
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 998 K
+
+Calculated rlist for 1x1 atom pair-list as 1.000 nm, buffer size 0.000 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.000 nm, buffer size 0.000 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 20x20x20, spacing 0.150 0.150 0.150
+
+Estimate for the relative computational load of the PME mesh part: 0.95
+
+This run will generate roughly 0 Mb of data
