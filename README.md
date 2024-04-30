@@ -9,18 +9,25 @@ This repository contains all the necessary files for the chem 864 course's proje
 - **Status:** PhD Student
 
 ## Project 1
-**Teammate:** Longbang Liu, Chemistry
 
 - project1_nvt.ipynb
 - project1_npt.ipynb
 - project1_nve.ipynb
 
 ## Project 2
-**Teammate:** Hyeree Hyun, Chemistry
 
 - project2.ipynb
 
 ## Project 3
-**Teammate:** Yiwen Wang, Chemistry
 
 - project3.ipynb
+
+## Project 4
+
+- S1_EneMin
+
+- S2_REMD
+  - step1.sh
+  - step2.sh
+  - step3.sh
+
