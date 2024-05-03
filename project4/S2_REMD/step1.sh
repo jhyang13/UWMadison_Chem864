@@ -4,7 +4,7 @@
 gmx=gmx
 
 # Create directories for each simulation step from 0 to 1000
-for i in $(seq 0 5); do
+for i in $(seq 0 500); do
     mkdir step_$i
 done
 
@@ -45,5 +45,4 @@ done
 
 # Make the script executable
 chmod +x "$script_file"
-
 

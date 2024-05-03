@@ -2,7 +2,7 @@
 ;	File 'mdout.mdp' was generated
 ;	By user: jyang753 (473948347)
 ;	On host: me-r036876
-;	At date: Tue Apr 30 15:16:44 2024
+;	At date: Fri May  3 15:21:17 2024
 ;
 ;	Created by:
 ;	                     :-) GROMACS - gmx grompp, 2022.4 (-:
@@ -11,7 +11,7 @@
 ;	Data prefix:  /usr/local/gromacs
 ;	Working dir:  /home/jyang753/project4/S2_REMD
 ;	Command line:
-;	  gmx grompp -c /home/jyang753/project4/S2_REMD/step_5/8.gro -p /home/jyang753/project4/S2_REMD/ala2.top -f /home/jyang753/project4/S2_REMD/mdp/nvt_8.mdp -o /home/jyang753/project4/S2_REMD/step_5/8.tpr -maxwarn 10
+;	  gmx grompp -c /home/jyang753/project4/S2_REMD/step_500/8.gro -p /home/jyang753/project4/S2_REMD/ala2.top -f /home/jyang753/project4/S2_REMD/mdp/nvt_8.mdp -o /home/jyang753/project4/S2_REMD/step_500/8.tpr -maxwarn 10
 
 ; VARIOUS PREPROCESSING OPTIONS
 ; Preprocessor information: use cpp syntax.
@@ -169,7 +169,7 @@ annealing-temp           =
 ; GENERATE VELOCITIES FOR STARTUP RUN
 gen_vel                  = no
 gen_temp                 = 998
-gen_seed                 = -33889
+gen_seed                 = -322970250
 
 ; OPTIONS FOR BONDS    
 constraints              = all-bonds
