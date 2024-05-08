@@ -27,7 +27,9 @@ This repository contains all the necessary files for the chem 864 course's proje
 - S1_EneMin
 
 - S2_REMD
-  - step1.sh
-  - step2.sh
-  - step3.sh
+  - start.sh
+  - re_energy.sh
+  - do-exchange.sh
+  - replica_exchange.py
+  - plot_energy.ipynb
 
