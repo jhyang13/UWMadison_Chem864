@@ -1,15 +1,27 @@
 import numpy as np
 from scipy.constants import R
 
+
 def read_last_line(filename):
+
     """Read the last line of a file to get the energy value."""
+
     with open(filename, 'r') as file:
         for line in file:
             pass
     return float(line.strip().split()[-1])
 
 def scale_coordinates(file1, file2, scale):
-    """Scale coordinates in a .gro file and write to a new file."""
+
+    """
+    Scale coordinates in a .gro file and write to a new file.
+    
+    Parameters:
+    - file1 (str): Path to the original .gro file containing the coordinates to be scaled.
+    - file2 (str): Path to the output .gro file where the scaled coordinates will be saved.
+    - scale (float): Scaling factor to apply to the coordinates.
+    """
+    
     with open(file1, 'r') as old_file, open(file2, 'w') as new_file:
 
         header, count = old_file.readline(), old_file.readline()
@@ -24,20 +36,26 @@ def scale_coordinates(file1, file2, scale):
                 else:
                     new_file.write(line)
 
+def is_exchange_accepted(delta):
+
+    """Determine whether an exchange is accepted based on the Metropolis criterion."""
+
+    return (delta <= 0) or (np.random.uniform() < np.exp(-delta))
+
 def perform_replica_exchange(file1, file2, T1, T2):
+
     """Wrapper function to handle coordinate scaling for two files."""
+
     scale_down = np.sqrt(T1/T2)
     scale_up = 1 / scale_down
     scale_coordinates(file1, 'ex_' + file2, scale_down)
     scale_coordinates(file2, 'ex_' + file1, scale_up)
 
-def is_exchange_accepted(delta):
-    """Determine whether an exchange is accepted based on the Metropolis criterion."""
-    return (delta <= 0) or (np.random.uniform() < np.exp(-delta))
-
 def main():
-    temperatures = np.linspace(298, 998, 8)  # Generates 8 values from 298 to 998
+
+    temperatures = [298, 398, 498, 598, 698, 798, 898, 998]  # Generates 8 values from 298 to 998
     betas = 1.0e3 / (R * temperatures)
+
     energy_files = [f"{i+1}.xvg" for i in range(8)]
     energies = [read_last_line(file) for file in energy_files]
 
@@ -50,4 +68,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
 
