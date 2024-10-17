@@ -1,6 +1,6 @@
 # CHEM864: Statistical Mechanics (001) SP24
 
-## Course Description
+### Course Description
 This course covers classical statistical mechanics and its applications in condensed phases. It includes kinetic theories for chemical reactions and protein conformational changes, molecular simulation tools, and advanced algorithms for studying system dynamics. The course also explores thermodynamic and structural properties of condensed liquids, with a focus on enhanced sampling techniques. Through group projects, students will gain practical experience with simulations, machine learning algorithms, and coding for calculating thermodynamic and kinetic properties.
 
 ### Instructor:
