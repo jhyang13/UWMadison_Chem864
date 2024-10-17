@@ -1,6 +1,7 @@
 # CHEM864: Statistical Mechanics (001) SP24
 
-This repository contains all the necessary files for the chem 864 course's projects at UW-Madison. Let me know if you can have access to my homework or not. ╰(●’◡’●)╮
+## Course Description
+This course covers classical statistical mechanics and its applications in condensed phases. It includes kinetic theories for chemical reactions and protein conformational changes, molecular simulation tools, and advanced algorithms for studying system dynamics. The course also explores thermodynamic and structural properties of condensed liquids, with a focus on enhanced sampling techniques. Through group projects, students will gain practical experience with simulations, machine learning algorithms, and coding for calculating thermodynamic and kinetic properties.
 
 ### Instructor:
 - **Name:** Prof. Xuhui Huang 
