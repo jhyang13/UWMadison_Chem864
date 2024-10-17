@@ -2,7 +2,13 @@
 
 This repository contains all the necessary files for the chem 864 course's projects at UW-Madison. Let me know if you can have access to my homework or not. ╰(●’◡’●)╮
 
-### Quick Introduction: 
+### Instructor:
+- **Name:** Prof. Xuhui Huang 
+- **Room:** 8305e, Chemistry Building
+- **Tel:** (608) 2653579
+- **E-mail:** xhuang@chem.wisc.edu
+
+### Student: 
 - **Name:** Jiahui Yang
 - **Email:** jyang753@wisc.edu
 - **Home Department:** Mechanical Engineering
