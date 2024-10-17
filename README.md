@@ -15,6 +15,13 @@ This course covers classical statistical mechanics and its applications in conde
 - **Home Department:** Mechanical Engineering
 - **Status:** PhD Student
 
+### Course Learning Outcomes
+After completing this course, students are expected to:
+- Understand statistical mechanics theories pertaining to the kinetics of chemical and biological systems in condensed phases.
+- Grasp statistical mechanics theories related to the thermodynamic and structural properties of condensed liquid phases.
+- Acquire hands-on experience with a variety of molecular simulation tools.
+- Cultivate coding skills for the analysis of simulation data.
+
 ### Project 1
 - project1_nvt.ipynb
 - project1_npt.ipynb
